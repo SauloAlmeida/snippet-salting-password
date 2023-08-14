@@ -4,7 +4,6 @@ on:
     push:
         branches: 
             - main
-
 jobs:
   build:
 
@@ -21,10 +20,10 @@ jobs:
           dotnet-version: ${{ matrix.dotnet-version }}
       - name: Install dependencies
         run: dotnet restore
-        working-directory: ./src
+        working-directory: ./src/SP.SaltingPassword
       - name: Build
         run: dotnet build --configuration Release --no-restore
-        working-directory: ./src
+        working-directory: ./src/SP.SaltingPassword
       - name: Test
         run: dotnet test --no-restore --verbosity normal
-        working-directory: ./src
+        working-directory: ./src/SP.SaltingPassword.Tests
