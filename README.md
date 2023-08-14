@@ -67,7 +67,7 @@ git clone https://github.com/SauloAlmeida/snippet-salting-password
 
 2. Acesse o diretório
 ```bash
-cd SP.SaltingPassword
+cd SP.SaltingPassword/src/SP.SaltingPassword
 ```
 
 ## Rodar o projeto
