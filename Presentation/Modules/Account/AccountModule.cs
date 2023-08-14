@@ -17,7 +17,7 @@ namespace SP.SaltingPassword.Presentation.Modules.Account
 
         public override void AddRoutes(IEndpointRouteBuilder app)
         {
-            app.MapPost("", ([FromServices] IAccountService service, [FromBody] AccountInput input) =>
+            app.MapPost("/", ([FromServices] IAccountService service, [FromBody] AccountInput input) =>
             {
                 var newAccount = Domain.Entity.Account.Create(input.Name, input.Email, input.Password);
 
