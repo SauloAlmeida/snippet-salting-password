@@ -1,17 +1,11 @@
 # Salting Password (Snippet project)
 
-<hr> 
-
 ## Motivaçãoo
 Ter uma implementação de boa prática de segurançaa.
-
-<hr> 
 
 ## Como funciona
 Ao armazenar uma conta, a senha informada é criptografada juntamente com um valor aleatório `salt` gerado.
 Com isso, em vez de ter apenas a `senha criptografada armazenada`, o `salt` também é salvo para que seja feita a combinação (`hash` + `salt`) para verificar a integridade da senha.
-
-<hr> 
 
 ### Código
 1. KEY_SIZE => O tamanho do hash/salt em bytes.
