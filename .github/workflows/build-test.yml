@@ -25,5 +25,5 @@ jobs:
         run: dotnet build --configuration Release --no-restore
         working-directory: ./src/SP.SaltingPassword
       - name: Test
-        run: dotnet test --no-restore --verbosity normal
+        run: dotnet test --verbosity normal
         working-directory: ./src/SP.SaltingPassword.Tests
