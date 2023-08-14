@@ -1,5 +1,5 @@
+using Carter;
 using SP.SaltingPassword.Application.Service;
-using SP.SaltingPassword.Presentation.Routes;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +7,7 @@ AddDocumentation(builder);
 
 AddServices(builder);
 
+AddRoutes(builder);
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
@@ -17,9 +18,9 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-ConfigureRoutes.Setup(app);
+app.MapCarter();
 
-app.Run();
+await app.RunAsync();
 
 static void AddDocumentation(WebApplicationBuilder builder)
 {
@@ -31,4 +32,9 @@ static void AddServices(WebApplicationBuilder builder)
 {
     builder.Services.AddSingleton<ISecurityService, SecurityService>();
     builder.Services.AddSingleton<IAccountService, AccountService>();
+}
+
+static void AddRoutes(WebApplicationBuilder builder)
+{
+    builder.Services.AddCarter();
 }
