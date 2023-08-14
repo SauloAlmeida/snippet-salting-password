@@ -1,6 +1,6 @@
 # Salting Password (Snippet project)
 
-## Motivaçãoo
+## Motivação
 Ter uma implementação de boa prática de segurançaa.
 
 ## Como funciona
