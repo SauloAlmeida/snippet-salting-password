@@ -64,6 +64,11 @@ git clone https://github.com/SauloAlmeida/snippet-salting-password
 cd SP.SaltingPassword/src/SP.SaltingPassword
 ```
 
+3. Restaure os pacotes
+```bash
+dotnet restore
+```
+
 ## Rodar o projeto
 
 1. Rode o projeto
