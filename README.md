@@ -1,7 +1,7 @@
 # Salting Password (Snippet project)
 
 ## Motivação
-Ter uma implementação de boa prática de segurançaa.
+Ter uma implementação de boa prática de segurança.
 
 ## Como funciona
 Ao armazenar uma conta, a senha informada é criptografada juntamente com um valor aleatório `salt` gerado.
